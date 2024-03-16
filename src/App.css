@@ -1,38 +1,130 @@
+:root {
+  --color1: #067bc2;
+  --color2: #e02100;
+  --color3: #84bcda;
+  --color4: #ecc30b;
+  --color5: #f3c98b;
+}
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--color1);
+  min-height: 20vh;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  flex: 1 0 auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+p {
+  font-size: 16pt;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  border-radius: 0%;
+  background-color: white;
+  color: var(--color1);
+  padding: 10px;
+  font-size: 18pt;
+}
+button:hover {
+  background-color: var(--color3);
+  color: white;
+}
+button:active {
+  background-color: var(--color4);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.box {
+  fill: #ecc30b;
+}
+
+.waves {
+  transform: translateY(500px) scaleY(-50%);
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.balloon {
+  width: 300px;
+  transform: scale(50%);
+}
+.box-breathe {
+  animation: breathing-animation-box ease-in-out 16s 10;
+}
+
+.balloon-breathe {
+  animation: breathing-animation ease-in-out 8s 10;
+}
+.waves-breathe {
+  animation: breathing-animation-waves ease-in-out 8s 10;
+}
+
+@keyframes breathing-animation-waves {
+  0% {
+    transform: translateY(500px) scaleY(-50%);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(500px) scaleY(-100%);
+  }
+  60% {
+    transform: translateY(500px) scaleY(-100%);
+  }
+  100% {
+    transform: translateY(500px) scaleY(-50%);
+  }
+}
+
+@keyframes breathing-animation-box {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(300px, 0);
+  }
+  50% {
+    transform: translate(300px, 300px);
+  }
+  75% {
+    transform: translate(0, 300px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes breathing-animation {
+  0% {
+    transform: scale(50%);
+  }
+  50% {
+    transform: scale(100%);
+  }
+  60% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(50%);
   }
 }
