@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/breathVis/static/css/main.110e4075.css",
+    "main.js": "/breathVis/static/js/main.0a28be45.js",
+    "static/js/787.6bef374e.chunk.js": "/breathVis/static/js/787.6bef374e.chunk.js",
+    "index.html": "/breathVis/index.html",
+    "main.110e4075.css.map": "/breathVis/static/css/main.110e4075.css.map",
+    "main.0a28be45.js.map": "/breathVis/static/js/main.0a28be45.js.map",
+    "787.6bef374e.chunk.js.map": "/breathVis/static/js/787.6bef374e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.110e4075.css",
+    "static/js/main.0a28be45.js"
+  ]
+}
