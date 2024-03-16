@@ -50,30 +50,38 @@ function Section({ clicked }) {
       return <Balloon />;
     } else if (clicked === "Waves") {
       return <Waves />;
+    } else if (clicked === "Box") {
+      return <Box />;
+    } else {
+      return null;
     }
-    return <Box />;
   };
-  return (
-    <div>
-      <p>
-        Click the{" "}
-        {clicked === "Balloon"
-          ? types[0].clickName
-          : clicked === "Box"
-          ? types[1].clickName
-          : types[2].clickName}{" "}
-        to start breathing.
-      </p>
-      <p>
-        {clicked === "Balloon"
-          ? types[0].text
-          : clicked === "Box"
-          ? types[1].text
-          : types[2].text}
-      </p>
-      {visualization("Balloon")}
-    </div>
-  );
+
+  if (clicked !== "") {
+    return (
+      <>
+        <p>
+          Click the{" "}
+          {clicked === "Balloon"
+            ? types[0].clickName
+            : clicked === "Box"
+            ? types[1].clickName
+            : types[2].clickName}{" "}
+          to start breathing.
+        </p>
+        <p>
+          {clicked === "Balloon"
+            ? types[0].text
+            : clicked === "Box"
+            ? types[1].text
+            : types[2].text}
+        </p>
+        {visualization()}
+      </>
+    );
+  } else {
+    return <p>Click a button to choose a visualization.</p>;
+  }
 }
 
 function Footer() {
